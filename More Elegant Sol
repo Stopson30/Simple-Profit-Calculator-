@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width",
+    initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+    content="ie=edge">
+    <title>Stock_Prices_Meta</title>
+
+</head>
+
+<body>
+
+    <article>
+        <h2 class="title">
+            <div id="b2"><button id="item1">Click Me Now!
+            </button>
+            <ol id="b1">
+            <li>
+                Stock Prices Elegant 
+            </li>
+            </ol>
+            </div>
+        </h2>
+    </article>
+    
+
+    <script>
+
+        const prices = [1, 3, 5, 2, 6, 9, 11, 2, 12];
+
+        console.log(maximumProfits(prices));
+
+        function maximumProfits(prices){  
+            let minPrice = Infinity;
+            let maxProfit = 0;
+
+            for(let i = 0; i < prices.length; i++){
+                const currentPrice = prices[i];
+                minPrice = Math.min(minPrice, currentPrice);
+                maxProfit = Math.max(maxProfit, currentPrice - minPrice); // the key is the Math library methods
+            }
+
+            return maxProfit;  //Time complexity has been reduced: O(n) now!
+
+        };
+
+
+
+        
+        console.log(maximumProfits(prices));   // hmm not convinced by why console logging the whole function .. 
+
+    </script>
+
+</body>
