@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width",
+    initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+    content="ie=edge">
+    <title>Stock_Prices_Meta</title>
+
+</head>
+
+<body>
+
+    <article>
+        <h2 class="title">
+            <div id="b2"><button id="item1">Click Me Now!
+            </button>
+            <ol id="b1">
+            <li>
+                Calculating element differences per Array & Maxing it 
+            </li>
+            </ol>
+            </div>
+        </h2>
+    </article>
+    
+
+    <script>
+
+        const prices = [1, 3, 5, 2, 6, 9, 11, 2, 12];
+
+        console.log(maximumProfits(prices));
+
+        function maximumProfits(prices){   // this is a brute force solution with the double looping
+            var profits = [0]; // we are creating an empty array to store the profits
+            for (let i = 0; i < prices.length; i++){
+                for (let j = i + 1; j < prices.length; j++){
+                    const profit = prices[j] - prices[i];
+                    profits.push(profit); // this is important as we keep adding the profit into the array as we examine the prices 
+                };
+            };
+
+            return Math.max(...profits)  //this is huge in that it saves a lot of time, this particular function
+        };
+
+
+
+        
+        console.log(maximumProfits(prices));   // checking the result 
+
+    </script>
+
+</body>
